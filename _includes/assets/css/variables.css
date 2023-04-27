@@ -1,0 +1,29 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #01295F;
+  --color-secondary: #dc9aa6;
+
+  /* Background Colors */
+  --color-bg: #596275;
+  --color-bg-secondary: #63cdda;
+  --color-bg-accent: #f6ff00;
+
+  /* Text and Border Colors */
+  --color-text: #ffffff;
+  --color-text-alt: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.06);
+
+  /* Status Colors */
+  --color-danger: #c44569;
+
+  /* Typography */
+  --font-family-base: "azo-sans-web", sans-serif;
+  --font-family-heading: "omnes-pro", sans-serif; 
+ 
+  /* Sizes */
+  --site-width: 80vw;
+
+  /* Other */
+  --border-radius: 12px;
+  --border-radius-sm: 5px;
+}

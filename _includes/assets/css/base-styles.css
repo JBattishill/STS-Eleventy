@@ -1,0 +1,382 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{ 
+  background: #050726; /* fallback for old browsers */
+  color:#FFF;
+  z-index: -5;
+  background: linear-gradient(to right, #050726, #302b63,#51009d, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradient 35s 5s ease-in infinite;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+.backToTop{
+  position:fixed;
+  bottom: 5vh;
+  left: 10vh;
+  z-index: 5;
+  background-color: #ffffffd4;
+  color: #050726;
+  font-family: "Sacramento", cursive;
+  }
+
+  .headerContainer { 
+    margin: 0 auto;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". positionOne . positionTwo ."
+      "positionThree . . . positionFour"
+      ". . positionFive . .";
+  }
+  
+  .positionOne { grid-area: positionOne; }
+  
+  .positionTwo { grid-area: positionTwo; }
+  
+  .positionThree { grid-area: positionThree; }
+  
+  .positionFour { grid-area: positionFour; }
+  
+  .positionFive { grid-area: positionFive;
+    margin-top: -12vh; }
+   
+  .artistContainer {
+    margin: 1.2rem auto;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    overflow:hidden;
+  }
+  
+  .artistContainer img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .artistContainer:hover{
+    box-shadow: 0px 0px 9px 4px #ffffff;
+    animation: glowImage 1.5s linear infinite alternate;
+    animation: glowShadow 1.5s linear infinite alternate;
+  }
+
+  .artistName{
+    margin: 0 auto;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #ffffff;
+    font-family: "Sacramento", cursive;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .artistName :hover{
+    text-decoration: underline;
+  }
+  
+  .blinkOne{
+    animation: blink 14s infinite;
+    -webkit-animation: blink 14s infinite;
+    animation-delay: 2s;
+  }
+  
+  .blinkTwo{
+    animation: blink 10s infinite;
+    -webkit-animation: blink 10s infinite;
+    animation-delay: 5s;
+  }
+  
+  .blinkThree{
+    animation: blink 16s infinite;
+    -webkit-animation: blink 16s infinite;
+  }
+
+  .blinkFour{
+    animation: blink 8s infinite;
+    -webkit-animation: blink 8s infinite;
+    animation-delay: 4.5s;
+  }
+  
+  .blinkFive{
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+    animation-delay: 5.5s;
+  }
+
+  .blinkTitle{
+    animation: blink 10s infinite;
+    -webkit-animation: blink 10s infinite;
+    animation-delay: 1.5s;
+  }
+  
+  
+  @keyframes glowShadow{
+    to {
+      box-shadow: 0px 0px 35px 15px #ffffff;
+    }
+  }
+  
+  @keyframes glowImage{
+    to {
+      -webkit-filter: brightness(1);
+       filter: brightness(1);
+    }
+  }
+  
+  .star{
+    filter: grayscale(1) invert(1);
+  }
+  
+  .circles{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      overflow: hidden;
+      z-index: -1;
+  }
+  
+  .circles i{
+      position: absolute;
+      display: block;
+      list-style: none;
+      color:#FFF;
+      font-size:1rem;
+      bottom: -150px;
+      animation: animate 10s reverse infinite;
+      z-index: 1;
+      width: 1rem;
+  }
+  
+  .circles i:nth-child(1){
+    left: 25%;
+    font-size:1.6rem;
+    animation-delay: 0s;
+  }
+  
+  .circles i:nth-child(2){
+    left: 10%;
+    font-size:0.9rem;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+  
+  .circles i:nth-child(3){
+    left: 70%;
+    font-size:1.1rem;
+    animation-delay: 4s;
+  }
+  
+  .circles i:nth-child(4){
+    left: 40%;
+    font-size:1.3rem;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+  
+  .circles i:nth-child(5){
+    left: 65%;
+    font-size:1rem;
+    animation-delay: 5s;
+  }
+  
+  .circles i:nth-child(6){
+    left: 75%;
+    font-size:1.7rem;
+    animation-delay: 3s;
+  }
+  
+  .circles i:nth-child(7){
+    left: 35%;
+    font-size:1.9rem;
+    animation-delay: 7s;
+  }
+  
+  .circles i:nth-child(8){
+    left: 50%;
+    font-size:0.8rem;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+  
+  .circles i:nth-child(9){
+    left: 20%;
+    font-size:0.6rem;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+  
+  .circles i:nth-child(10){
+    left: 85%;
+    font-size:1.4rem;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+  
+  .upcircles{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  
+  }
+  
+  .upcircles i{
+    position: absolute;
+    display: block;
+    list-style: none;
+    color:#FFF;
+    font-size:1rem;
+    bottom:-150px;
+    animation: animate 15s linear infinite;
+    z-index: -1;
+    width: 1rem;
+  }
+  
+  
+  .upcircles i:nth-child(1){
+     
+    left: 25%;
+    font-size:1.6rem;
+    animation-delay: 0s;
+  }
+  
+  .upcircles i:nth-child(2){
+    left: 10%;
+    font-size:0.9rem;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+  
+  .upcircles i:nth-child(3){
+    left: 70%;
+    font-size:1.1rem;
+    animation-delay: 4s;
+  }
+  
+  .upcircles i:nth-child(4){
+    left: 40%;
+    font-size:1.3rem;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+  
+  .upcircles i:nth-child(5){
+    left: 65%;
+    font-size:1rem;
+    animation-delay: 0s;
+  }
+  
+  .upcircles i:nth-child(6){
+    left: 75%;
+    font-size:1.7rem;
+    animation-delay: 3s;
+  }
+  
+  .upcircles i:nth-child(7){
+    left: 35%;
+    font-size:1.9rem;
+    animation-delay: 7s;
+  }
+  
+  .upcircles i:nth-child(8){
+    left: 50%;
+    font-size:0.8rem;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+  
+  .upcircles i:nth-child(9){
+    left: 20%;
+    font-size:0.6rem;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+  
+  .upcircles i:nth-child(10){
+    left: 85%;
+    font-size:1.4rem;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+  
+  
+  @keyframes animate {
+  
+      0%{
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+          border-radius: 0;
+      }
+  
+      100%{
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+      }
+  
+  }
+  
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
